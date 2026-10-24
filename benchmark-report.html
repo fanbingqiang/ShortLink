@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Benchmark Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; }
+        h1 { color: #333; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 10px; text-align: center; border: 1px solid #ddd; }
+        th { background: #007bff; color: white; }
+        .highlight { background: #d4edda; font-weight: bold; }
+        .fail { color: #dc3545; }
+        .success { color: #28a745; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Benchmark Report - 2026-04-12 11:33:59</h1>
+        
+        <h2>Test Configuration</h2>
+        <p>Target: http://192.168.157.161:8080</p>
+        <p>Duration per test: 30s</p>
+        
+        <h2>Results</h2>
+        <table>
+            <tr>
+                <th>Threads</th>
+                <th>Total</th>
+                <th>Success</th>
+                <th>Failed</th>
+                <th>Rate%</th>
+                <th>RPS</th>
+                <th>Avg(ms)</th>
+                <th>P50</th>
+                <th>P90</th>
+                <th>P99</th>
+            </tr>            <tr class="">
+                <td>20</td>
+                <td>1080</td>
+                <td class="success">1071</td>
+                <td class="fail">9</td>
+                <td>99.17</td>
+                <td><strong>35.91</strong></td>
+                <td>27.31</td>
+                <td>27</td>
+                <td>28</td>
+                <td>32</td>
+            </tr>            <tr class="">
+                <td>50</td>
+                <td>1100</td>
+                <td class="success">1093</td>
+                <td class="fail">7</td>
+                <td>99.36</td>
+                <td><strong>36.03</strong></td>
+                <td>27.22</td>
+                <td>27</td>
+                <td>28</td>
+                <td>32</td>
+            </tr>            <tr class="">
+                <td>100</td>
+                <td>1100</td>
+                <td class="success">1085</td>
+                <td class="fail">15</td>
+                <td>98.64</td>
+                <td><strong>36.27</strong></td>
+                <td>27.22</td>
+                <td>27</td>
+                <td>28</td>
+                <td>31</td>
+            </tr>            <tr class="highlight">
+                <td>150</td>
+                <td>1200</td>
+                <td class="success">1187</td>
+                <td class="fail">13</td>
+                <td>98.92</td>
+                <td><strong>36.67</strong></td>
+                <td>27.68</td>
+                <td>27</td>
+                <td>30</td>
+                <td>35</td>
+            </tr>            <tr class="">
+                <td>200</td>
+                <td>1200</td>
+                <td class="success">1190</td>
+                <td class="fail">10</td>
+                <td>99.17</td>
+                <td><strong>35.85</strong></td>
+                <td>27.41</td>
+                <td>27</td>
+                <td>28</td>
+                <td>32</td>
+            </tr>        </table>
+        
+        <h2>Conclusion</h2>
+        <p>Peak Performance: <strong>36.67 RPS</strong> at <strong>150 threads</strong></p>
+    </div>
+</body>
+</html>

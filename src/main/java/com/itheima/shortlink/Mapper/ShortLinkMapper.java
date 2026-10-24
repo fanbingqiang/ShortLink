@@ -3,6 +3,7 @@ package com.itheima.shortlink.Mapper;
 import com.itheima.shortlink.entity.ShortLink;
 import org.apache.ibatis.annotations.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @Mapper
@@ -27,4 +28,7 @@ public interface ShortLinkMapper {
             @Result(property = "createdAt", column = "created_at")
     })
     Optional<ShortLink> findById(Long id);
+
+    @Select("SELECT short_code FROM t_short_url")
+    List<String> selectAllShortCodes();
 }
